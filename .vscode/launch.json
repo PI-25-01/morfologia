@@ -1,0 +1,19 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "(lldb) Launch",
+			"type": "lldb-dap",
+			"request": "launch",
+			"program": "${workspaceFolder}/zig-out/bin/${workspaceFolderBasename}",
+			"args": [],
+			"cwd": "${workspaceFolder}",
+			"initCommands": [
+				"type format add --format u 'unsigned char'",
+				"type format add --format u 'char'"
+			],
+			"internalConsoleOptions": "openOnSessionStart",
+			"preLaunchTask": "build",
+		}
+	]
+}
